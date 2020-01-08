@@ -1,0 +1,35 @@
+.btn {
+    @extend h5;
+    padding: 14px 24px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    &:focus {
+        outline:0;
+    }
+    &.on-dark {
+       color: $deep-blue !important;
+       background-color: $white !important;
+    }
+    &.lg {
+        @extend h4;
+        padding: 20px 24px ;
+    }
+    &.primary {
+        color: $white;
+        background-color: $deep-blue;
+    }
+    &.secondary {
+        color: $deep-blue;
+        background-color: $white;
+        border: 2px solid $deep-blue;
+    }
+    &.tertiary {
+        color: $white;
+        background-color: $beige;
+    }
+    &.icon {
+        padding: 0;
+        background-color: transparent;
+    }
+}

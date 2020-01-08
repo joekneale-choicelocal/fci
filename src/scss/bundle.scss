@@ -1,0 +1,31 @@
+/*!
+* Theme Name: FCI Theme
+* Description: A custom theme for Floor Coverings International
+* Theme URI:
+* Tags:
+* Author: m2M Strategies
+* Author URI: http://choicelocal.com/
+* Version: 1.0
+* License: GPL3
+* License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+//vendors
+@import 'include-media/dist/include-media';
+
+// variables
+@import "./variables/colors";
+
+// components
+@import "./components/responsive";
+@import "./components/typography";
+@import "./components/common";
+@import "./components/buttons";
+
+// partials
+@import "./partials/top-nav";
+@import "./partials/footer";
+
+// pages
+@import './pages/home';
+

@@ -1,0 +1,31 @@
+// $breakpoints defined in include-media vendor styles
+$breakpoints: (phone: 450px, tablet: 768px, desktop: 1024px);
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @include media(">#{$breakpoint-name}") {
+        *.inline-block-#{$breakpoint-name},
+        *.block-#{$breakpoint-name},
+        *.flex-#{$breakpoint-name},
+        *.inline-flex-#{$breakpoint-name} {
+            display: none !important;
+        }
+    }
+    @include media("<=#{$breakpoint-name}") {
+        *.hide-#{$breakpoint-name} {
+            display: none !important;
+        }
+    }
+    @include media(">=#{$breakpoint-name}") {
+        *.inline-block-#{$breakpoint-name} {
+            display: inline-block;
+        }
+        *.block-#{$breakpoint-name} {
+            display: block;
+        }
+        *.flex-#{$breakpoint-name} {
+            display: flex;
+        }
+        *.inline-flex-#{$breakpoint-name} {
+            display: inline-flex;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+$soft-black: #28282B;
+$soft-black-72: #646464;
+$lt-grey: #BBBDC0;
+$soft-black-12: #E5E5E5;
+$soft-black-04: #F6F6F6;
+$white: #FFFFFF;
+
+$beige: #9F948B;
+$lt-beige: #C4BDB6;
+$soft-beige: #ECEBEA;
+
+$deep-blue: #224861;
+$true-green: #1C6F52;
+
+$attention: #EEBA00;
+$error: #BD3838;
+$success: #509A49;
+
+$colors: (soft-black, $soft-black) ,
+        (soft-black-72, $soft-black-72),
+        (lt-grey, $lt-grey),
+        (soft-black-12, $soft-black-12),
+        (soft-black-04, $soft-black-04);
+
+@each $color-name, $color-value in $colors {
+    .#{$color-name} {
+        color: $color-value;
+    }
+}

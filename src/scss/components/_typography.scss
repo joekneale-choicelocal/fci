@@ -1,0 +1,86 @@
+@mixin h2_size() {
+    font-size: 32px;
+    line-height: 40px;
+}
+@mixin h1_size() {
+    font-size: 48px;
+    line-height: 56px;
+
+    @include media('<=phone') {
+        @include h2_size();
+    }
+}
+%default-txt-size {
+    font-size: 16px;
+    line-height: 24px;
+}
+%bold-uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+//clear margins
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+// default font size
+html  {
+    @extend %default-txt-size;
+}
+b {
+    font-weight: 700;
+}
+.txt-small {
+    font-size: 14px;
+    line-height: 20px;
+}
+.txt-md {
+    @extend %default-txt-size;
+}
+.txt-lg {
+    font-size: 20px;
+    line-height: 32px;
+}
+h1 {
+    @include h1_size();
+    @extend %bold-uppercase;
+}
+h2 {
+    @include h2_size();
+    @extend %bold-uppercase;
+}
+.display {
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.5px;
+    @extend %bold-uppercase;
+    @include media('<=tablet') {
+        @include h1_size();
+    }
+}
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+}
+h4 {
+    font-size: 16px;
+    line-height: 20px;
+    @extend %bold-uppercase;
+}
+h5 {
+    font-size: 14px;
+    line-height: 16px;
+    @extend %bold-uppercase;
+}
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: $deep-blue;
+    > svg {
+        margin-left: 16px;
+    }
+}
